@@ -1,0 +1,55 @@
+import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+.footer-chat {
+    background-color: #141E27;
+    padding: 16px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+.text-input { 
+    border-radius: 8px;
+    height: 2rem;
+    width: 70%;
+    background-color: #EEEDDE;
+    border: 2px solid #203239;
+    outline: none;
+}
+
+.text-input:focus {
+    border: 2px solid #ddd871;
+}
+
+.send-button { 
+    background-color: #141E27;
+    cursor: pointer;
+    height: 2.4rem;
+    width: 20%;
+    border-radius: 12px;
+    border: 2px solid #3e4c52;
+    color: #EEEDDE;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.send-button:hover {
+    color: #ddd871;
+    background-color: #141E27;
+    border: 2px solid #ddd871;
+}
+
+.enviar-texto {
+    margin-left: 4px;
+}
