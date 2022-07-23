@@ -5,15 +5,15 @@ import styles from 'header.module.css';
 function ChatHeader() {
     return (
       <div className="App">
-            <header className="header">
-                <img className="profile-image" src="../../assets/xaropinho.png" alt=""></img>
-                <div className="column">
-                    <h1 className="title">
+            <header className="header.header">
+                <img className="header.profile-image" src="../../assets/xaropinho.png" alt=""></img>
+                <div className="header.column">
+                    <h1 className="header.title">
                         Xaropinho BOT
                     </h1>
-                    <div className="online">
-                        <div className="online-icon"></div>
-                        <h1 className="online-text">online</h1>
+                    <div className="header.online">
+                        <div className="header.online-icon"></div>
+                        <h1 className="header.online-text">online</h1>
                     </div>
                 </div>
             </header>
