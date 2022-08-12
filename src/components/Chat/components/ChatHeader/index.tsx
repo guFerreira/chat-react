@@ -1,19 +1,17 @@
-import React from 'react';  
-import ReactDOM from 'react-dom';  
-import styles from 'header.module.css';  
-
+import './chat-header.css';  
+import xaropinhoImg from '../../../../assets/images/xaropinho.png'
 function ChatHeader() {
     return (
-      <div className="App">
-            <header className="header.header">
-                <img className="header.profile-image" src="../../assets/xaropinho.png" alt=""></img>
-                <div className="header.column">
-                    <h1 className="header.title">
+      <div>
+            <header className="header">
+                <img className="profile-image" src={xaropinhoImg} alt=""></img>
+                <div className="column">
+                    <h1 className="title">
                         Xaropinho BOT
                     </h1>
-                    <div className="header.online">
-                        <div className="header.online-icon"></div>
-                        <h1 className="header.online-text">online</h1>
+                    <div className="online">
+                        <div className="online-icon"></div>
+                        <h1 className="online-text">online</h1>
                     </div>
                 </div>
             </header>

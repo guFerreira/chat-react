@@ -1,0 +1,131 @@
+
+.chat-animation {
+    animation-name: chat-slide;
+    animation-duration: 1s;
+}
+
+@keyframes chat-slide {
+    from{
+        opacity: 0;
+        margin-top: 100%;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0%;
+    }
+    
+}
+
+.chat-rotation {
+    animation-name: rotation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+.bounce-animation {
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+        width: 70%;
+        height: 30%;
+    }
+    10%{
+        transform: translateY(0px);
+        width: 80%;
+        height: 25%;
+
+    }
+    25%{
+        transform: translateY(0px);
+        width: 85%;
+        height: 15%;
+
+    }
+    35%{
+        transform: translateY(-200px);
+        width: 50%;
+        height: 35%;
+
+    }
+    50%{
+        transform: translateY(-240px);
+        width: 30%;
+        height: 80%;
+    }
+    65%{
+        transform: translateY(0px);
+        width: 30%;
+        height: 35%;
+
+    }
+    85%{
+        transform: translateY(0px);
+        width: 50%;
+        height: 25%;
+
+    }
+    100%{
+        transform: translateY(0px);
+        width: 70%;
+        height: 30%;
+    }
+}
+
+.background-animation {
+    animation: pulse;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    background: linear-gradient(-45deg, #ec2b2b,#ee9d52, #e7cd3c, #535ffd);
+	background-size: 500% 500%;
+	height: 100vh;
+}
+
+@keyframes pulse {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+
+
+.xaropinho-gritando-animation {
+    animation: xaropinho-grito;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes xaropinho-grito {
+    0% {
+		transform: translateX(-20px);
+	}
+	50% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(-20px);
+	}
+  }

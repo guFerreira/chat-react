@@ -1,8 +1,17 @@
+import About from "./components/about";
+import Access from "./components/Access";
+import Functionalities from "./components/functionalities";
+import HomeTitle from "./components/homeTitle";
+import StyledHeader from "./components/styledHeader";
 
 function HomePage() {
   return (
     <div>
-        <h1>HOMEPAGE</h1>
+        <StyledHeader />
+        <HomeTitle />
+        <About />
+        <Functionalities/>
+        <Access/>
     </div>
   );
 }

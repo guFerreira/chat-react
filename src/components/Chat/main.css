@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500&display=swap');
+
+html, body, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body{
+    /*background-image: linear-gradient(#E0DDAA, #ffffff, #EEEDDE,#E0DDAA);*/
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:100vh;
+}
+
+
+.chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.chatbot-box {
+    display: flex;
+    flex-direction: column;
+}
