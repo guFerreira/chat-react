@@ -2,7 +2,7 @@
 
 function About() {
     return (
-        <div id="sobre" className="sobre">
+        <div style={{backgroundColor:"rgb(255, 224, 102)"}} id="sobre" className="sobre">
             <h1>Sobre</h1>
             <div className="sobre-info">
                 <div className="sobre-texto">
