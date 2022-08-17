@@ -5,24 +5,28 @@ import { useAtom } from "jotai";
 import { messagesAtom, newMessageAtom } from "../../../../atoms";
 
 function ChatFooter() {
-  const [messages, setMessages] = useAtom(messagesAtom);
-  const [newMessage, setNewMessage] = useAtom(newMessageAtom);
-
+  const [messages, setMessages] = useAtom(messagesAtom)
+  const [newMessage, setNewMessage] = useAtom(newMessageAtom)
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)
 
-  const resetInput = () =>{
-    setNewMessage('')
-  }
 
-  function sendMessage(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const buildedNewMessage:Message = {
+
+  const buildSendedMessage = (text:string):Message => {
+    return {
       text: newMessage,
       received:false,
       audio:'',
       image:''
     }
-    setMessages([...messages, buildedNewMessage])
+  }
+
+  const resetInput = () =>{
+    setNewMessage('')
+  }
+  
+  function sendMessage(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setMessages([...messages, buildSendedMessage(newMessage)])
     resetInput()
   }
 
