@@ -1,4 +1,5 @@
 
+import "./home-footer.css"
 
 function Access() {
     return (

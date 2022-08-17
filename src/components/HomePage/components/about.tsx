@@ -1,4 +1,4 @@
-
+import "./main.css"
 import xaropinhoLike from "../../../assets/images/xaropinhoLike.gif"
 function About() {
     return (
