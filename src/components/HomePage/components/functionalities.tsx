@@ -1,6 +1,10 @@
+import { Box, Stack, Typography } from "@mui/material"
+import { fontWeight } from "@mui/system"
 
 import exemploChat from "../../../assets/images/exemploChat.png"
 import xaropinho from "../../../assets/images/xaropinho.gif"
+
+
 
 function Functionalities() {
     return (
@@ -12,7 +16,22 @@ function Functionalities() {
                             <h1>Funcionalidades</h1>
                             <div className="funcionalides-info">
                                 <div className="funcionalide-exemplo">
-                                    <img src={exemploChat}alt= "exemplo Chat" />
+                                    <Box>
+                                        <Stack direction={'column'} display={'flex'} justifyContent={'flex-end'} alignItems={'flex-end'}>
+                                            <Box
+                                            component="img"
+                                            sx={{
+                                            height: 450,
+                                            width: 450,
+                                            maxHeight: { xs: 450, md: 400 },
+                                            maxWidth: { xs: 350, md: 250 },
+                                            }}
+                                            alt="exemplo Chat"
+                                            src={exemploChat}
+                                            />
+                                        </Stack>
+
+                                    </Box>
                                 </div>
                                 <div className="sobre-texto">
                                     <p>No Xaropinho Bot, é possível conversar em linguagem natural pelo chat, 
