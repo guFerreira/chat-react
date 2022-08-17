@@ -1,8 +1,8 @@
 
-
+import xaropinhoLike from "../../../assets/images/xaropinhoLike.gif"
 function About() {
     return (
-        <div style={{backgroundColor:"rgb(255, 224, 102)"}} id="sobre" className="sobre">
+        <div id="sobre" className="sobre">
             <h1>Sobre</h1>
             <div className="sobre-info">
                 <div className="sobre-texto">
@@ -13,7 +13,8 @@ function About() {
                 </div>
         
                 <div className="sobre-exemplo">
-                    <img src="../../assets/xaropinhoLike.gif" />
+                    <img src={xaropinhoLike}alt="Xaropinho like" />
+                    
                     <audio controls>
                         <source src="https://www.myinstants.com/media/sounds/vinheta-do-ratinho-rapaiz_TQuIZ6U.mp3" type="audio/mpeg" />
                     </audio>

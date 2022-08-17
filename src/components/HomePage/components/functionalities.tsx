@@ -1,4 +1,6 @@
 
+import exemploChat from "../../../assets/images/exemploChat.png"
+import xaropinho from "../../../assets/images/xaropinho.gif"
 
 function Functionalities() {
     return (
@@ -10,7 +12,7 @@ function Functionalities() {
                             <h1>Funcionalidades</h1>
                             <div className="funcionalides-info">
                                 <div className="funcionalide-exemplo">
-                                    <img src="../../assets/exemploChat.PNG" />
+                                    <img src={exemploChat}alt= "exemplo Chat" />
                                 </div>
                                 <div className="sobre-texto">
                                     <p>No Xaropinho Bot, é possível conversar em linguagem natural pelo chat, 
@@ -18,7 +20,7 @@ function Functionalities() {
                                     <p>Juntamente com o audio, em algumas situações, o xaropinho bot também poderá enviar uma mensagem com uma imagem
                                         ou gif que represente a situação.</p>
                                     <div className="xaropinho-danca">
-                                        <img src="../../assets/xaropinho.gif" />
+                                        <img src={xaropinho}alt= "xaropinho" />
                                     </div>
                                 </div>
                             </div>
