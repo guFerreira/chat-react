@@ -26,8 +26,10 @@ function ChatFooter() {
   
   function sendMessage(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setMessages([...messages, buildSendedMessage(newMessage)])
-    resetInput()
+    if(newMessage.length > 0) {
+      setMessages([...messages, buildSendedMessage(newMessage.trim())])
+      resetInput()
+    }
   }
 
     return (
