@@ -1,0 +1,49 @@
+
+.funcionalidades{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    font-size: 1.4rem;
+    color: #141E27;
+}
+.funcionalidades h1{
+    margin: 0;
+}
+
+.funcionalide-exemplo{
+    display: flex;
+    align-items: baseline;
+    align-content: center;
+}
+
+.funcionalide-exemplo img {
+    border-radius: 26px;
+    height: 400px;
+    padding: 12px;
+}
+
+.funcionalides-info {
+    display: flex;
+    flex-direction: row;
+    color: #141E27;
+    justify-content: space-between;
+}
+
+.xaropinho-danca{
+    display: flex;
+    justify-content: end;
+    height: 200px;
+}
+
+@media (max-width: 800px) {
+    .funcionalides-info {
+      flex-direction: column;
+      padding: 0px;
+      align-items:center;
+    }
+
+    .xaropinho-danca{
+        justify-content: center;
+        height: 240px;
+    }
+  }

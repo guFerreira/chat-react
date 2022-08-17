@@ -11,13 +11,16 @@ import { useAtom } from "jotai";
 
 function Chat() {
 	const [messages, setMessages] = useAtom(messagesAtom);
-  
+
   const getMessages = async () => {
     try {
       const response = await chatService.getMessages()
+      console.log(response)
       setMessages([...messages, response])
+
     } catch (error) {
       console.error(error);
+      setMessages([])
     }
   }
 

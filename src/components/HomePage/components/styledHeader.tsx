@@ -1,6 +1,8 @@
 
 import { AppBar, MenuItem, Toolbar, Typography } from "@mui/material"
-
+import "../funcionalidades.css"
+import "../home-footer.css"
+import "../main.css"
 
 function StyledHeader() {
     const pages = ['Sobre', 'Funcionalidades', 'Acessar']

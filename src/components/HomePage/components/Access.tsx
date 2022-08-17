@@ -1,4 +1,6 @@
-
+import "../funcionalidades.css"
+import "../home-footer.css"
+import "../main.css"
 
 function Access() {
     return (

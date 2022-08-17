@@ -7,7 +7,7 @@ type MessageInput = {
 async function getMessages() {
     try {
       const { data, status } = await axios.get<any>(
-        'localhost:8080/api/messages',
+        'http://localhost:8000/api/messages',
         {
           headers: {
             Accept: 'application/json',
@@ -31,7 +31,7 @@ async function getMessages() {
 async function sendMessage(textInput:MessageInput) {
     try {
       const { data } = await axios.post<any>(
-        'localhost:8082/api/messages/send',
+        'http://localhost:8000/api/messages/send',
         textInput,
         {
           headers: {
@@ -39,10 +39,7 @@ async function sendMessage(textInput:MessageInput) {
             Accept: 'application/json',
           },
         },
-      );
-  
-      console.log(JSON.stringify(data, null, 4));
-  
+      );  
       return data;
     } catch (error) {
       if (axios.isAxiosError(error)) {

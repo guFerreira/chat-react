@@ -1,7 +1,9 @@
 import { Box, Stack, Typography } from "@mui/material"
 import exemploChat from "../../../assets/images/exemploChat.png"
 import xaropinho from "../../../assets/images/xaropinho.gif"
-
+import "../funcionalidades.css"
+import "../home-footer.css"
+import "../main.css"
 function Functionalities() {
     return (
         <div className="body">

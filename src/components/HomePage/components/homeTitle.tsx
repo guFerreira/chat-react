@@ -4,7 +4,9 @@ import { fontWeight } from "@mui/system"
 import xaripinhoGritando from "../../../assets/images/xaropinhoGritando.gif"
 
 import "./animation.css"
-
+import "../funcionalidades.css"
+import "../home-footer.css"
+import "../main.css"
 function HomeTitle() {
     return (
         <div className="body">

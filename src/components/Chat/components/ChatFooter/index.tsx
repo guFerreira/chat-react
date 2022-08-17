@@ -9,8 +9,6 @@ function ChatFooter() {
   const [newMessage, setNewMessage] = useAtom(newMessageAtom)
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)
 
-
-
   const buildSendedMessage = (text:string):Message => {
     return {
       text: newMessage,
@@ -24,11 +22,13 @@ function ChatFooter() {
     setNewMessage('')
   }
   
-  function sendMessage(event: React.FormEvent<HTMLFormElement>) {
+  const sendMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if(newMessage.length > 0) {
       setMessages([...messages, buildSendedMessage(newMessage.trim())])
-      chatService.sendMessage({text: newMessage.trim()})
+      const response = await chatService.sendMessage({text: newMessage.trim()})
+      console.log(response)
+      setMessages([...messages, response])
       resetInput()
 
     }

@@ -1,5 +1,7 @@
-
 import xaropinhoLike from "../../../assets/images/xaropinhoLike.gif"
+import "../funcionalidades.css"
+import "../home-footer.css"
+import "../main.css"
 function About() {
     return (
         <div id="sobre" className="sobre">
