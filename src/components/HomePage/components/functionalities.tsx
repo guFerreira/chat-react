@@ -1,10 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material"
-import { fontWeight } from "@mui/system"
-
 import exemploChat from "../../../assets/images/exemploChat.png"
 import xaropinho from "../../../assets/images/xaropinho.gif"
-
-
 
 function Functionalities() {
     return (
