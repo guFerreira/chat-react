@@ -1,3 +1,4 @@
+
 import xaropinhoLike from "../../../assets/images/xaropinhoLike.gif"
 import "../funcionalidades.css"
 import "../home-footer.css"
