@@ -3,7 +3,7 @@ import './chat-footer.css';
 import Message from '../ChatBody/components/message';
 import { useAtom } from "jotai";
 import { messagesAtom, newMessageAtom } from "../../../../atoms";
-
+import chatService from "../../services/chatService"
 function ChatFooter() {
   const [messages, setMessages] = useAtom(messagesAtom)
   const [newMessage, setNewMessage] = useAtom(newMessageAtom)
@@ -28,7 +28,9 @@ function ChatFooter() {
     event.preventDefault()
     if(newMessage.length > 0) {
       setMessages([...messages, buildSendedMessage(newMessage.trim())])
+      chatService.sendMessage({text: newMessage.trim()})
       resetInput()
+
     }
   }
 
