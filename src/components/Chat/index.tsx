@@ -8,6 +8,7 @@ import chatService from "./services/chatService";
 
 import { messagesAtom } from "../../atoms";
 import { useAtom } from "jotai";
+import Message from "./components/ChatBody/components/message";
 
 function Chat() {
 	const [messages, setMessages] = useAtom(messagesAtom);
@@ -15,17 +16,21 @@ function Chat() {
   const getMessages = async () => {
     try {
       const response = await chatService.getMessages()
-      console.log(response)
-      setMessages([...messages, response])
-
+      return response
     } catch (error) {
       console.error(error);
       setMessages([])
     }
   }
 
+  const loadMessages = async () => {
+    const currentMessages = await getMessages()
+    setMessages([...messages, ...currentMessages])
+  }
+
   useEffect(() => {
-    getMessages()
+    console.log('update')
+    loadMessages()
   },[]);
 
   return (

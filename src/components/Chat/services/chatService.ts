@@ -1,12 +1,17 @@
 import axios from 'axios';
+import Message from '../components/ChatBody/components/message';
 
 type MessageInput = {
     text:string
 }
 
+type ReceivedMessages = {
+  data: Message[]
+}
+
 async function getMessages() {
     try {
-      const { data, status } = await axios.get<any>(
+      const { data, status } = await axios.get(
         'http://localhost:8000/api/messages',
         {
           headers: {
@@ -15,8 +20,8 @@ async function getMessages() {
         },
       );
       console.log('response status is: ', status);
-  
-      return data;
+      console.log('kekw', data.data)
+      return data.data
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.log('error message: ', error.message);

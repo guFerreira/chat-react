@@ -1,6 +1,7 @@
 .chat-body{
     background-color: #E0DDAA;
     max-height: clamp(280px, 380px, 800px);
+    height:300px;
     overflow: auto;
 }
 

@@ -9,27 +9,25 @@ function ChatBody() {
 	const messagesEndRef = useRef<null | HTMLDivElement>(null)
 
 	const scrollToBottom = () => {
-			messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-		}
+		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+	}
 
 	useEffect(() => {
+		console.log('teste',messages)
 		scrollToBottom()
 	}, [messages])
 
 	return (
 		<div className="chat-body" >
-			{
-				messages.map((message) => {
-						return <Message message={message}/>
+			{	
+				messages.map((message,index) => {
+					return <Message key={index} message={message}/>
 				})
 			}
-		<div ref={messagesEndRef} />
+			<div ref={messagesEndRef} />
 		</div>
 	);
 }
   
-
-
-
 export default ChatBody;
   

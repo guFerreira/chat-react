@@ -25,12 +25,10 @@ function ChatFooter() {
   const sendMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     if(newMessage.length > 0) {
-      setMessages([...messages, buildSendedMessage(newMessage.trim())])
-      const response = await chatService.sendMessage({text: newMessage.trim()})
-      console.log(response)
-      setMessages([...messages, response])
       resetInput()
-
+      const responseMessage = await chatService.sendMessage({text: newMessage.trim()})
+      console.log('responsemessage', responseMessage.data)
+      setMessages([...messages, ...[buildSendedMessage(newMessage.trim()), responseMessage.data]])
     }
   }
 
